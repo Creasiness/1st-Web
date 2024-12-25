@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Creasiness</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="body">
+        <!--Header-->
+        <header class="pop-ups">
+            <div id="header">
+                <font face="Arial" color="#fff" size="6">
+                    <b>&nbsp;Creasiness</b>
+                </font>
+                <label id="profile-open" onclick="profile_open()">
+                    <font face="Arial" color="#fff">
+                        &nbsp;
+                        <b>Profile</b>
+                    </font>
+                </label>
+                <label id="nav_btn" onclick="nav_open()">
+                    <font face="Arial" color="#fff" size="4">
+                        <b id="nav_bold">☰</b>
+                    </font>
+                </label>
+            </div>
+        </header>
+
+            <!--Nav-Bar-->
+            <div id="nav_bar" class="pop-ups">
+                <label id="nav_close" onclick="nav_close()">
+                    <font face="Arial" color="#fff">
+                        <b>X</b>
+                    </font>
+                </label>
+                <br>
+                <br>
+                <br>
+            </div>
+            <!--End_Nav-Bar-->
+
+
+            <!--Profile-->
+            <div id="profile" class="pop-ups">
+                <label id="profile-close" onclick="profile_close()">
+                    <font face="Arial" color="#fff">
+                        <b>X</b>
+                    </font>
+                </label>
+                <label id="form1-open" onclick="form1_open()">
+                    <font face="Arial" color="#fff">
+                        &nbsp;&nbsp;
+                        <b>Log-in</b>
+                    </font>
+                </label>
+                <label id="form2-open" onclick="form2_open()">
+                    <font face="Arial" color="#fff">
+                        &nbsp;
+                        <b>Sign-up</b>
+                    </font>
+                </label>
+            </div>
+            <!--End_Profile-->
+            <!--Forms-->
+            <form action="" id="form1" class="pop-ups">
+                <br>
+                <center><font size="6" face="Britannic" color="#fff">Login Form</font></center>
+                <label id="form1-close" onclick="form1_close()"><font face="Arial" color="#fff">X</font></label>
+                <br>
+                <br>
+
+                <font size="3" color="#fff">&nbsp;&nbsp;&nbsp;Username:</font>
+                <input type="text" name="Username" id="user" placeholder="Enter username" required>                
+                <div id="user-icon">&nbsp;<i class="fa-solid fa-user"></i></div>
+
+                <font size="3" color="#fff">&nbsp;&nbsp;&nbsp;Password:</font>
+                <input type="password" name="Password" id="pass" placeholder="Enter password" required>
+                <div id="pass-icon">&nbsp;<i class="fa-solid fa-lock"></i></div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <font color="#fff" size="5" align="center"><input type="submit" value=" " id="sub1"><label for="sub1" id="submit1">Log-in</label></font>
+                <br>
+                <font color="#fff" size="5" align="center"><input type="reset" value=" " id="res1"><label for="res1" id="reset1">Clear</label></font>
+                <font size="2" color="#333">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Have no account, Create one!</b>
+                </font>
+                <label class="form2-open" onclick="form2_open()"><font face="Arial" color="#fff">&nbsp;<b>Sign-up</b></font></label>
+            </form>
+        
+            <form action="" id="form2" class="pop-ups">
+                <br>
+                <center><font size="6" face="Britannic" color="#fff">Signup Form</font></center>
+                <label id="form2-close" onclick="form2_close()"><font face="Arial" color="#fff">X</font></label>
+                <br>
+                <br>
+
+                <font size="3" color="#fff">&nbsp;&nbsp;&nbsp;Email:</font>
+                <input type="email" name="Email" id="email" placeholder="Enter your email address" required>
+                <div id="email-icon">&nbsp;<i class="fa-solid fa-envelope"></i></div>
+
+                <font size="3" color="#fff">&nbsp;&nbsp;&nbsp;Username:</font>
+                <input type="text" name="Username" id="user" placeholder="Create username" required>                     
+                <div id="user-icon">&nbsp;<i class="fa-solid fa-user"></i></div>
+
+                <font size="3" color="#fff">&nbsp;&nbsp;&nbsp;Password:</font>
+                <input type="password" name="Password" id="pass" placeholder="Create password" required>
+                <div id="pass-icon">&nbsp;<i class="fa-solid fa-lock"></i></div>
+
+                <font size="3" color="#fff">&nbsp;&nbsp;&nbsp;Confirm Password:</font>
+                <input type="password" name="Confirm Password" id="pass-conf" placeholder="Re-enter the password" required>
+                <div id="pass-conf-icon">&nbsp;<i class="fa-solid fa-lock"></i></div>
+
+                <br>
+
+                <font size="3" color="#fff">&nbsp;&nbsp;&nbsp;Gender: </font>
+                <label for="male" id="maler" onclick="maler()">Male</label>
+                <input type="radio" name="Gender" value="male" id="male" required>
+                <label for="female" id="femaler" onclick="femaler()">Female</label>
+                <input type="radio" name="Gender" value="female" id="female">
+                
+                <br>
+                <br>
+                <br>
+                <font color="#fff" size="5" align="center"><input type="submit" value=" " id="sub2"><label for="sub2" id="submit2" onclick="radio_clear()">Sign-up</label></font>
+                <br>
+                <font color="#fff" size="5" align="center"><input type="reset" value=" " id="res2"><label for="res2" id="reset2" onclick="radio_clear()">Clear</label></font>
+                <font size="2" color="#333">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Have an account!</b>
+                </font>
+                <label class="form1-open" onclick="form1_open()"><font face="Arial" color="#fff">&nbsp;<b>Log-in</b></font></label>
+            </form>
+            <!--End_Forms-->
+        <!--End_Header-->
+        <!--Main-->
+        <div id="bg-off"></div>
+        <div id="main">
+            <br>
+            <br>
+            <center>
+                <font size="5" face="Algerian">Take a small look for:</font>
+                <font size="6" color="#fb0" face="Brush Script MT"><b>Business Deals</b></font>
+                <font size="6" color="#000" face="Brush Script MT"><b>,</b></font>
+                <font size="6" color="#fb0" face="Brush Script MT"><b>Online Shopping</b></font>
+                <font size="6" color="#000" face="Brush Script MT"><b>and</b></font>
+                <font size="6" color="#fb0"face="Brush Script MT"><b>Editors/Web Developers</b></font>
+            </center>
+            <br>
+            <br>
+            <div id="dealer-btn" onclick="deal()">
+                <center><font size="4" color="#0bf" face="Bookman Old Style">Search for great <b>Business Deals</b></font></center>
+                <font size="2" color="#fff" face="Bookman Old Style" align="justify"><p>You can use our services for your necessities. Or you can also deal with us for any products or Business matters. <br><br><font color="#000">(<b>Notice:</b> We don't deals with any type of illegal Dealers)</font></p></font>
+            </div>
+            <br>
+            <div id="store-btn" onclick="store()">
+                <center><font size="4" color="#0bf" face="Bookman Old Style">Go to <b>Online Store</b></font></center>
+                <font size="2" color="#fff" face="Bookman Old Style" align="justify"><p>You can buy many nessecery items (like: Electronics, Accessories etc..) from our Online Store.</p></font>
+            </div>
+            <br>
+            <div id="editor-btn" onclick="edit()">
+                <center><font size="4" color="#0bf" face="Bookman Old Style">Find <b>Editors</b> or <b>Web Developers</b></font></center>
+                <font size="2" color="#fff" face="Bookman Old Style" align="justify"><p>You can contact us for editing any photos or videos. <br><br><font color="#000">(<b>Notice:</b> We don't edit any type of illegal videos or any video that can be used in any illegal work)</font></p></font>
+            </div>
+            <br>
+            <br>
+            <div id="skill">
+                <center><font size="6" color="#b40"><u>Skills</u></font></center>
+                <br>
+                <br>
+                <font size="5" color="#fff">HTML 5 </font>
+                <div class="progress" id="pr-html">
+                    <div id="value"></div>
+                </div>
+                <br>
+                <br>
+                <font size="5" color="#fff">CSS 3 </font>
+                <div class="progress" id="pr-css">
+                    <div id="value"></div>
+                </div>
+                <br>
+                <br>
+                <font size="5" color="#fff">JavaScript </font>
+                <div class="progress" id="pr-js">
+                    <div id="value"></div>
+                </div>
+                <br>
+                <br>
+                <font size="5" color="#fff">Python </font>
+                <div class="progress" id="pr-python">
+                    <div id="value"></div>
+                </div>
+                <br>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <!--End_Main-->
+        <!--Footer-->
+        <div id="footer" class="pop-ups">
+            <a href="https://youtube.com/@Creasiness"><i class="fa-brands fa-youtube fa-xl" style="color: #f00;"></i></a>
+            &nbsp;<a href="https://t.me/Creasiness"><i class="fa-brands fa-telegram fa-xl" style="color: #0af;"></i></a>
+            &nbsp;<a href="https://wa.me/919433591224"><i class="fa-brands fa-whatsapp fa-xl" style="color: #0f0;"></i></a>
+            &nbsp;<a href="https://x.com/Creasiness"><i class="fa-brands fa-x-twitter fa-xl" style="color: #000;"></i></a>
+            &nbsp;<a href="https://discord.gg/kjVveJ2F3J"><i class="fa-brands fa-discord fa-xl" style="color: #78d;"></i></a>
+            <div id="foot_line"></div>
+            <font color="#fff" style="position: absolute; top: 50%; right: 12px; transform: translateY(-50%);">Copyright<font style="font-size: 3px;">Creepy_Crunch</font> @ 2024  |  Creasiness</font>
+        </div>
+        <!--End_Footer-->
+    </div>
+</body>
+</html>
