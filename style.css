@@ -1,0 +1,711 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.pop-ups{
+    position: fixed;
+    z-index: 1000;
+}
+*::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+    color: transparent;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: #888;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+#body{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+
+/*Forms*/
+
+    #form1{
+        display: none;
+        margin: 0;
+        padding: 0;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        height: 370px;
+        width: 330px;
+        background-color: #0c5;
+        border-radius: 14px;
+        transform: translate(-50%, -50%);
+    }
+    #form2{
+        display: none;
+        margin: 0;
+        padding: 0;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        height: 450px;
+        width: 330px;
+        background-color: #0c5;
+        border-radius: 14px;
+        transform: translate(-50%, -50%);
+    }
+    #maler{
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 2px;
+        padding: 2px;
+        height: 15px;
+        width: 35px;
+        border-radius: 5px;
+        border: solid 2px #fff;
+        outline: solid 2px #000;
+        background-color: #fff;
+    }
+    #femaler{
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 2px;
+        padding: 2px;
+        height: 15px;
+        width: 48px;
+        border-radius: 5px;
+        border: solid 2px #fff;
+        outline: solid 2px #000;
+        background-color: #fff;
+    }
+
+    .form1-open{
+        margin: 0;
+        padding: 5px;
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 70px;
+        background-color: #0cf;
+        border-radius: 70px;
+        cursor: pointer;
+    }
+    .form2-open{
+        margin: 0;
+        padding: 5px;
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 70px;
+        background-color: #0cf;
+        border-radius: 70px;
+        cursor: pointer;
+
+    }
+
+    /*Inputs*/
+        #email{
+            margin: 2px;
+            padding: 2px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            background-color: #0f6;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        #email-icon{
+            padding: 1px;
+            position: relative;
+            top: -21px;
+            left: 233px;
+            height: 17px;
+            width: 22px;
+            border-radius: 0;
+            border: none;
+            outline: none;
+            background-color: #096;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        #user{
+            margin: 2px;
+            padding: 2px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            background-color: #0f6;
+        }
+        #user-icon{
+            padding: 1px;
+            position: relative;
+            top: -21px;
+            left: 240px;
+            height: 17px;
+            width: 22px;
+            border-radius: 0;
+            border: none;
+            outline: none;
+            background-color: #096;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        #pass{
+            margin: 2px;
+            padding: 2px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            background-color: #0f6;
+        }
+        #pass-icon{
+            padding: 1px;
+            position: relative;
+            top: -21px;
+            left: 237px;
+            height: 17px;
+            width: 24px;
+            border-radius: 0;
+            border: none;
+            outline: none;
+            background-color: #096;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        #pass-conf{
+            margin: 2px;
+            padding: 2px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            background-color: #0f6;
+        }
+        #pass-conf-icon{
+            padding: 1px;
+            position: relative;
+            top: -21px;
+            left: 295px;
+            height: 17px;
+            width: 24px;
+            border-radius: 0;
+            border: none;
+            outline: none;
+            background-color: #096;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        #male{
+            display: none;
+        }
+        #female{
+            display: none;
+        }
+    /*End_Inputs*/
+
+    /*Submits*/
+        #sub1{
+            display: none;
+        }
+        #submit1{
+            display: block;
+            margin: 0;
+            padding: 0;
+            position:relative;
+            top: 0;
+            left: 50%;
+            height: 28px;
+            width: 90px;
+            background: linear-gradient(120deg, #0ff, #f0f);
+            border-radius: 90px;
+            transform: translateX(-50%);
+            transition-duration: 800ms;
+            cursor: pointer;
+        }
+        #submit1:hover{
+            background: linear-gradient(120deg, #f0f, #0ff);
+        }
+
+        #sub2{
+            display: none;
+        }
+        #submit2{
+            display: block;
+            margin: 0;
+            padding: 0;
+            position:relative;
+            top: 0;
+            left: 50%;
+            height: 28px;
+            width: 90px;
+            background: linear-gradient(120deg, #0ff, #f0f);
+            border-radius: 90px;
+            transform: translateX(-50%);
+            transition-duration: 800ms;
+            cursor: pointer;
+        }
+        #submit2:hover{
+            background: linear-gradient(120deg, #f0f, #0ff);
+        }
+    /*End_Submits*/
+
+    /*Resets*/
+        #res1{
+            display: none;
+        }
+        #reset1{
+            display: block;
+            margin: 0;
+            padding: 0;
+            position:relative;
+            top: 0;
+            left: 50%;
+            height: 28px;
+            width: 80px;
+            background-color: #0f0;
+            background: linear-gradient(120deg, #0ff, #f0f);
+            border-radius: 80px;
+            transform: translateX(-50%);
+            transition-duration: 800ms;
+            cursor: pointer;
+        }
+        #reset1:hover{
+            background: linear-gradient(120deg, #f0f, #0ff);
+        }
+
+        #res2{
+            display: none;
+        }
+        #reset2{
+            display: block;
+            margin: 0;
+            padding: 0;
+            position:relative;
+            top: 0;
+            left: 50%;
+            height: 28px;
+            width: 80px;
+            background-color: #0f0;
+            background: linear-gradient(120deg, #0ff, #f0f);
+            border-radius: 80px;
+            transform: translateX(-50%);
+            transition-duration: 800ms;
+            cursor: pointer;
+        }
+        #reset2:hover{
+            background: linear-gradient(120deg, #f0f, #0ff);
+        }
+    /*End_Resets*/
+
+    #form1-close{
+        margin: 0;
+        padding: 0;
+        position:absolute;
+        top: 12px;
+        left: 100%;
+        height: 15px;
+        width: 12px;
+        background-color: #f55;
+        border: outset;
+        border-color: #fbb;
+        border-width: 2px;
+        transform: translateX(-25px);
+        cursor: pointer;
+    }
+    #form2-close{
+        margin: 0;
+        padding: 0;
+        position:absolute;
+        top: 12px;
+        left: 100%;
+        height: 15px;
+        width: 12px;
+        background-color: #f55;
+        border: outset;
+        border-color: #fbb;
+        border-width: 2px;
+        transform: translateX(-25px);
+        cursor: pointer;
+    }
+
+/*End_Forms*/
+
+/*Header*/
+    header{
+        margin: 0;
+        padding: 0;
+        position:fixed;
+        top: 0;
+        left: 0;
+        height: 40px;
+        width: 100%;
+        background-color: #fff;
+    }
+    #header{
+        margin: 0;
+        padding: 0;
+        position:absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #90f;
+        z-index: 1001;
+    }
+
+    #profile-open{
+        margin: 0;
+        padding: 5px;
+        position:absolute;
+        top: 50%;
+        right: 38px;
+        height: 18px;
+        width: 65px;
+        background-color: #c0f;
+        border-radius: 0;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    #nav_btn{
+        margin: 0;
+        padding: 0;
+        position:absolute;
+        top: 50%;
+        right: 5px;
+        height: 28px;
+        width: 28px;
+        background-color: #c0f;
+        border-radius: 0;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    #nav_bold{
+        margin: 0;
+        padding: 0;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+/*End_Header*/
+
+/*Nav-Bar*/
+    #nav_bar{
+        margin: 0;
+        padding: 0;
+        position:absolute;
+        top: 6%;
+        left: 100%;
+        height: 94%;
+        width: 0;
+        background-color: #09f;
+        transform: translateX(-100%);
+        transition-duration: 800ms;
+        overflow: hidden;
+    }
+    #nav_close{
+        display: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 12px;
+        left: 85%;
+        height: 15px;
+        width: 12px;
+        background-color: #f55;
+        border: outset;
+        border-color: #fbb;
+        border-width: 2px;
+        cursor: pointer;
+    }
+/*End_Nav-Bar*/
+
+#profile{
+    display: none;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 80px;
+    width: 80px;
+    background-color: #0cf;
+    border-radius: 0;
+    transform: translate(-50%, -50%);
+}
+#profile-close{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 15px;
+    width: 12px;
+    background-color: #f55;
+    border: outset;
+    border-color: #fbb;
+    border-width: 2px;
+    cursor: pointer;
+}
+#form1-open{
+    margin: 0;
+    padding: 5px;
+    position:absolute;
+    bottom: 40px;
+    left: 50%;
+    height: 18px;
+    width: 80px;
+    background-color: #c0f;
+    border-radius: 0;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+#form2-open{
+    margin: 0;
+    padding: 5px;
+    position:absolute;
+    bottom: 5px;
+    left: 50%;
+    height: 18px;
+    width: 80px;
+    background-color: #c0f;
+    border-radius: 0;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+/*Main*/
+    #bg-off{
+        margin: 0;
+        padding: 0;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        height: 0;
+        width: 0;
+        background-color: #000a;
+        border-radius: 500px;
+        transition-duration: 800ms;
+        z-index: 999;
+        transform: translate(-50%, -45.6%);
+    }
+    #main{
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 94%;
+        width: 100%;
+        overflow: scroll;
+    }
+
+
+    #dealer-btn{
+        padding: 5px;
+        position: relative;
+        top: 0;
+        left: 50%;
+        height: 120px;
+        width: 350px;
+        background-color: #086;
+        transform: translateX(-50%);
+        border: solid 2px #0c5;
+        border-bottom-width: 8px;
+        border-top-width: 0;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    #dealer-btn:hover{
+        top: 2px;
+        /*border-color: #aaa;*/
+        border-bottom-width: 6px;
+    }
+
+    #store-btn{
+        padding: 5px;
+        position: relative;
+        top: 0;
+        left: 50%;
+        height: 60px;
+        width: 350px;
+        background-color: #086;
+        transform: translateX(-50%);
+        border: solid 2px #0c5;
+        border-bottom-width: 8px;
+        border-top-width: 0;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    #store-btn:hover{
+        top: 2px;
+        /*border-color: #aaa;*/
+        border-bottom-width: 6px;
+    }
+
+    #editor-btn{
+        padding: 5px;
+        position: relative;
+        top: 0;
+        left: 50%;
+        height: 90px;
+        width: 350px;
+        background-color: #086;
+        transform: translateX(-50%);
+        border: solid 2px #0c5;
+        border-bottom-width: 8px;
+        border-top-width: 0;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    #editor-btn:hover{
+        top: 2px;
+        /*border-color: #aaa;*/
+        border-bottom-width: 6px;
+    }
+
+
+    #skill{
+        padding: 20px;
+        position: relative;
+        top: 0;
+        left: 50%;
+        height: 250px;
+        width: 700px;
+        background-color: #086;
+        transform: translateX(-50%);
+        border: solid 2px #0c5;
+        border-radius: 20px;
+        cursor: default;
+    }
+    #skill .progress{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 12px;
+        width: 450px;
+        background-color: #888;
+        border: solid 1px #000;
+        border-top-width: 2px;
+        border-bottom-width: 2px;
+        border-radius: 20px;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    #skill #pr-html{
+        top: 98px;
+        left: 200px;
+    }
+    #skill #pr-html #value{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 85%;
+        background-color: #0bf;
+    }
+
+    #skill #pr-css{
+        top: 142px;
+        left: 200px;
+    }
+    #skill #pr-css #value{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 52%;
+        background-color: #0bf;
+    }
+
+    #skill #pr-js{
+        top: 188px;
+        left: 200px;
+    }
+    #skill #pr-js #value{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 28%;
+        background-color: #0bf;
+    }
+
+    #skill #pr-python{
+        top: 234px;
+        left: 200px;
+    }
+    #skill #pr-python #value{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 36%;
+        background-color: #0bf;
+    }
+
+
+    #search{
+        position: fixed;
+        top: 60px;
+        left: 50%;
+        height: 30px;
+        width: 300px;
+        background-color: #0bf;
+        transform: translateX(-50%);
+        border-radius: 6px;
+    }
+    #search input{
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        height: 24px;
+        width: 268px;
+        background: transparent;
+        transform: translateY(-50%);
+        outline: none;
+        border: none;
+        border-bottom: 2px solid #000;
+    }
+    #srch-btn{
+        position: absolute;
+        top: 50%;
+        right: 2px;
+        height: 26px;
+        width: 26px;
+        background: transparent;
+        transform: translateY(-50%);
+        border-radius: 25px;
+        cursor: pointer;
+    }
+    #srch-btn:hover{
+        background-color: #0002;
+    }
+/*End_Main*/
+
+
+/*Footer*/
+    #footer{
+        padding: 12px;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        height: 15px;
+        width: 500px;
+        background-color: #555;
+        cursor: default;
+        transform: translateX(-50%);
+        border: inset 5px #bbb;
+    }
+/*End_Footer*/
